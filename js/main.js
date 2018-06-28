@@ -161,7 +161,7 @@ createRestaurantHTML = (restaurant) => {
   image.src = imgurl1x;
   //image.sizes = `100vw`;
   //loading images depending on viewport size
-  image.srcset = `${imgurl1x} 100w, ${imgurl2x} 450w, ${imgurl1x} 600w`;
+  image.srcset = `${imgurl1x} 420w, ${imgurl2x} 599w, ${imgurl1x} 1024w`;
 
 //  image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = restaurant.name + ' restaurant promotional image';

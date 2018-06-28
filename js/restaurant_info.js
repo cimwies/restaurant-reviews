@@ -78,7 +78,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const imgurl1x = imgurlbase + '_1x.jpg';
   const imgurl2x = imgurlbase + '_2x.jpg';
   image.src = imgurl1x;
-  image.srcset = `${imgurl1x} 600w, ${imgurl2x} 800w`;
+  image.srcset = `${imgurl1x} 600w, ${imgurl2x} 1024w`;
 
 
   image.alt = restaurant.name + ' restaurant promotional image';
