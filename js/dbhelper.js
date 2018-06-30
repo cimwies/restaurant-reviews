@@ -154,33 +154,13 @@ static get DATABASE_URL() {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
-  /**
-   * Restaurant image URL.
-   
-  static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
-  }
-*/
-
  /**
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant, type) {
-    
     return `/img/${type}/${restaurant.id}`;
-
-    /*
-    if (restaurant.photograph) {
-      console.log('schau mal ' + restaurant.id + restaurant.photograph);
-
-      return `/img/${type}/${restaurant.id}`;
-
-    }
-
-    return `/img/${type}/${restaurant.id}`;
-    */
-
   }
+
   /**
    * Map marker for a restaurant.
    */
@@ -193,17 +173,7 @@ static get DATABASE_URL() {
       })
       marker.addTo(newMap);
     return marker;
-  } 
-  /* static mapMarkerForRestaurant(restaurant, map) {
-    const marker = new google.maps.Marker({
-      position: restaurant.latlng,
-      title: restaurant.name,
-      url: DBHelper.urlForRestaurant(restaurant),
-      map: map,
-      animation: google.maps.Animation.DROP}
-    );
-    return marker;
-  } */
+  }
 
 }
 
