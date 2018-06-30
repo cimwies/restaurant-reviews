@@ -8,7 +8,7 @@ self.addEventListener('install', e => {
     caches.open('staticCacheName')
     .then( cache =>  {
       return cache.addAll([
-        '/restaurant-views',
+        '/restaurant-reviews',
         '/index.html',
         '/restaurant.html',
         '/css/styles.css',
