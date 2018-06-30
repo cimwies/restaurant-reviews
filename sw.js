@@ -16,7 +16,6 @@ self.addEventListener('install', e => {
         '/js/restaurant_info.js',
         '/js/dbhelper.js',
         '/data/restaurants.json'
-        //TODO die Bilder nicht vergessen?
       ])
       .catch( err => {
         console.log("Caches open failed: " + err);
