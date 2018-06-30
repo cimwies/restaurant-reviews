@@ -16,7 +16,7 @@ class DBHelper {
    */
 
 static get DATABASE_URL() {
-  const port = 445
+  const port = 80
   return `https://cimwies.github.io/restaurant-reviews/data/restaurants.json`;
 
 }
