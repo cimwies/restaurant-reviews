@@ -8,7 +8,7 @@ let markers = [];
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initMap(); // added 
+  //initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
 });
@@ -73,10 +73,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiY3dpZXMiLCJhIjoiY2ppcTV4M2pkMDFiZzNwa2I0d254eHplOSJ9.oPffCKtDaPbC5mG5glTOfA',
     maxZoom: 18,
@@ -158,11 +158,7 @@ createRestaurantHTML = (restaurant) => {
   const imgurl1x = imgurlbase + '_1x.jpg';
   const imgurl2x = imgurlbase + '_2x.jpg';
   image.src = imgurl1x;
-  //image.sizes = `100vw`;
-  //loading images depending on viewport size
   image.srcset = `${imgurl1x} 420w, ${imgurl2x} 599w, ${imgurl1x} 1024w`;
-
-//  image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = restaurant.name + ' restaurant promotional image';
   li.append(image);
 
