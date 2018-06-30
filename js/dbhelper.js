@@ -158,7 +158,7 @@ static get DATABASE_URL() {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant, type) {
-    return `/img/${type}/${restaurant.id}`;
+    return `/restaurant-reviews/img/${type}/${restaurant.id}`;
   }
 
   /**
