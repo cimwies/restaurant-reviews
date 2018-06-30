@@ -82,7 +82,7 @@ section {
 }
 
 header {
-   background-color: #2a2a2a; /*#252831;*/
+  background-color: #2a2a2a; /*#252831;*/
 }
 
 #maincontent {
@@ -124,32 +124,32 @@ nav h1 a {
 }
 
 #breadcrumb {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    background-color: #eee;
-    margin: 0;
-    padding: 0.5rem 1.25rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: #eee;
+  margin: 0;
+  padding: 0.5rem 1.25rem 0.5rem;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #015298 /*#0275d8*/;
-    text-decoration: none;
+  color: #015298;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #013058 /*#01447e*/;
-    text-decoration: underline;
+  color: #013058;
+  text-decoration: underline;
 }
 
 /* ====================== Map ====================== */
@@ -220,7 +220,6 @@ nav h1 a {
 }
 
 #restaurants-list li {
-  /*flex: 0 0 29%;*/
   background-color: #fff;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 0.25rem;
@@ -372,7 +371,6 @@ nav h1 a {
 
 #reviews-list li {
   background-color: #fff;
-  /*border: 2px solid #f3f3f3;*/
   display: block;
   list-style-type: none;
   margin: 0 0 1.25rem;

@@ -2,7 +2,7 @@ let restaurants,
   neighborhoods,
   cuisines;
 var newMap;
-var markers = [];
+let markers = [];
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -142,12 +142,11 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 
 /**
  * Create restaurant HTML.
- *
+ * Reading material
  * https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
  * https://blog.kulturbanause.de/2014/09/responsive-images-srcset-sizes-adaptive/
  * https://developers.google.com/web/fundamentals/design-and-ux/responsive/images
  *
- * <img src="bild.jpg" srcset="bild.jpg 1x, bild@2x.jpg 2x" alt="">
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
@@ -189,7 +188,6 @@ createRestaurantHTML = (restaurant) => {
     const url = DBHelper.urlForRestaurant(restaurant);
     window.location = url;
   };
- // more.href = DBHelper.urlForRestaurant(restaurant);
   div.append(more)
 
   return li
@@ -212,27 +210,28 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 } 
 
 /**
- * Add The service worker .
+ * Add The service worker.
+ * Reading material: https://www.kollegorna.se/en/2017/06/service-worker-gotchas/
  */
 
-
-/*
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./js/sw/sw.js')
-  .then((reg) => {
-    // registration worked
-    if(reg.installing) {
-      console.log('Service worker installing');
-    } else if(reg.waiting) {
-      console.log('Service worker installed');
-    } else if(reg.active) {
-      console.log('Service worker active');
-}
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch((error) => {
-    // registration failed
-    console.log('Registration failed with ' + error);
+  window.addEventListener('load', function() {
+      navigator.serviceWorker
+      .register('/sw.js', {scope: '/'})
+      .then((reg) => {
+        // Registration was successful :)
+        if(reg.installing) {
+            console.log('Service worker installing');
+          } else if(reg.waiting) {
+            console.log('Service worker installed');
+          } else if(reg.active) {
+            console.log('Service worker active');
+          }
+        console.log('ServiceWorker registration successful with scope: ' + reg.scope);
+      })
+      .catch((err) => {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      }); 
   });
 }
-
-*/
