@@ -8,18 +8,10 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
 
-  /*  local settings
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
     return `http://localhost:${port}/data/restaurants.json`;
   }
-   */
-
-static get DATABASE_URL() {
-  const port = 80
-  return `https://cimwies.github.io/restaurant-reviews/data/restaurants.json`;
-
-}
 
   /**
    * Fetch all restaurants.
@@ -159,7 +151,7 @@ static get DATABASE_URL() {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant, type) {
-    return `/restaurant-reviews/img/${type}/${restaurant.id}`;
+    return `/img/${type}/${restaurant.id}`;
   }
 
   /**
