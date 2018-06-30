@@ -231,7 +231,7 @@ if ('serviceWorker' in navigator) {
       })
       .catch((err) => {
         // registration failed :(
-        console.log('ServiceWorker registration failed: ', err + reg.scope);
+        console.log('ServiceWorker registration failed: ', err + err.scope);
       }); 
   });
 }
