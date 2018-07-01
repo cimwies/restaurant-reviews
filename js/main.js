@@ -79,7 +79,7 @@ initMap = () => {
   });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiY3dpZXMiLCJhIjoiY2ppcTV4M2pkMDFiZzNwa2I0d254eHplOSJ9.oPffCKtDaPbC5mG5glTOfA',
-    maxZoom: 18,
+    maxZoom: 16,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -207,7 +207,8 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 /**
  * Add The service worker.
- * Reading material: https://www.kollegorna.se/en/2017/06/service-worker-gotchas/
+ * internal info note: https://www.kollegorna.se/en/2017/06/service-worker-gotchas/
+ * internal info note: https://flaviocopes.com/service-workers/
  */
 
 if ('serviceWorker' in navigator) {
@@ -224,6 +225,7 @@ if ('serviceWorker' in navigator) {
             console.log('Service worker active');
           }
         console.log('ServiceWorker registration successful with scope: ' + reg.scope);
+       // does this work here?: return swRegistration.sync.register('event1')
       })
       .catch((err) => {
         // registration failed :(
