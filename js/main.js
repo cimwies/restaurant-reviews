@@ -179,7 +179,7 @@ createRestaurantHTML = (restaurant) => {
   div.append(address);
 
   const more = document.createElement('button');
-  more.innerHTML = 'View Details';
+  more.innerHTML = 'View Details  &#9655';
   more.onclick = function () {
     const url = DBHelper.urlForRestaurant(restaurant);
     window.location = url;
@@ -225,7 +225,6 @@ if ('serviceWorker' in navigator) {
             console.log('Service worker active');
           }
         console.log('ServiceWorker registration successful with scope: ' + reg.scope);
-       // does this work here?: return swRegistration.sync.register('event1')
       })
       .catch((err) => {
         // registration failed :(

@@ -178,7 +178,7 @@ const fillBreadcrumb = (restaurant = self.restaurant) => {
   const a = document.createElement('a');
   a.href = window.location;
   a.innerHTML = restaurant.name;
-  a.setAttribute('aria-current', 'page');
+  // a.setAttribute('aria-current', 'page');
   li.appendChild(a);
   breadcrumb.appendChild(li);
 };
