@@ -34,7 +34,7 @@ a:focus {
 }
 
 a img {
-  border: none 0px #fff;
+  border: none;
 }
 
 .leaflet-container a {
@@ -139,7 +139,7 @@ nav h1 a {
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  background-color: #363636; /*#cfba58; #eee;*/
+  background-color: #363636;
   margin: 0;
   padding: 0.5rem 1.25rem 0.5rem;
 }
@@ -285,6 +285,15 @@ nav h1 a {
   border: 1px solid #b20000;
 }
 
+#restaurant-list .restaurant-text-area button:after {
+  display: inline;
+  top: 6px;
+  right: 8px;
+  color: #fff;
+  content: '▷';
+  padding-left: 4px;
+}
+
 /* ====================== Restaurant Details ====================== */
 
 #restaurant-container {
@@ -300,7 +309,7 @@ nav h1 a {
 }
 
 #restaurant-img {
-	width: 100%;
+  width: 100%;
 }
 
 #restaurant-cuisine {
