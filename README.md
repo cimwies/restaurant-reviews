@@ -12,9 +12,9 @@ Udacity FEND Nanodegree Program - Project6
 
 ### Specification
 
-* responsice Design
-* added accessibility features
-* offline functionality
+* Responsive Design with responsive images, sizing and art direction
+* Accessibility updates
+* Service worker implementatione to allow viewing of previously browsed pages while offline
 
 ### How to view?
 
